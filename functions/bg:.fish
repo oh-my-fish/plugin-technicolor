@@ -4,7 +4,7 @@ function bg: -a color
 
   if set -q text
     set_color -b $color ^/dev/null
-    echo -e "$text"
+    inline: "$text"
     set_color normal ^/dev/null
   end
 end

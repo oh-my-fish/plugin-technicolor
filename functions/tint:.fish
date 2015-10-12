@@ -4,7 +4,7 @@ function tint: -a color
 
   if set -q text
     set_color $color ^/dev/null
-    echo -e "$text"
+    inline: "$text"
     set_color normal ^/dev/null
   end
 end

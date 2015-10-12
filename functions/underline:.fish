@@ -1,5 +1,5 @@
 function underline:
   set_color -u ^/dev/null
-  printf "$argv"
+  inline: "$argv"
   set_color normal ^/dev/null
 end
