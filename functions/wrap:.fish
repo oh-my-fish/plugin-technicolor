@@ -3,5 +3,7 @@ function wrap: -a columns
     and set -l text $argv[2..-1]
 
   set -q text;
-    and echo "$text" | fold -s -w "$columns"
+    and for line in $text
+      echo -e $line | fold -s -w "$columns"
+    end
 end
