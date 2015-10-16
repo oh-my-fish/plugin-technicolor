@@ -1,3 +1,3 @@
 function inline:
-  echo -n -s $argv
+  echo -n -s "$argv"
 end
