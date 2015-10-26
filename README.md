@@ -20,23 +20,23 @@ Each function does one, and only one thing, and is named accordingly to its duty
 You can make text coloured using `tint:`.
 
 ```fish
-tint: red The London bridge is falling down!
-tint: 555 The London bridge is falling down!
-echo (tint: red "Error!") Something went wrong!
+tint: red 'The London bridge is falling down!'
+tint: 555 'The London bridge is falling down!'
+echo (tint: red 'Error!') 'Something went wrong!'
 ```
 
 Set a background color using `bg:`
 
 ```fish
-bg: blue Violets are blue
-bg: 400 Want some wine, sir\?
+bg: blue 'Violets are blue'
+bg: 400 'Want some wine, sir?'
 ```
 
 Use both via command substitution!
 
 ```fish
-bg: red (tint: white You better read this text!)
-tint: white (bg: red You better read this text!)
+bg: red (tint: white 'You better read this text!')
+tint: white (bg: red 'You better read this text!')
 ```
 
 ### Stylization
@@ -44,17 +44,17 @@ tint: white (bg: red You better read this text!)
 Make text `bold:`
 
 ```fish
-bold: The quick brown fox jumps over the lazy dog
+bold: 'The quick brown fox jumps over the lazy dog'
 ```
 
 Output text verbatim, without _adding_ newlines or trailing spaces using `inline:`
 
 ```fish
 function oompa
-  inline: "Oompa Loompa "
-  inline: "doom-pa-dee-do "
-  inline: "I have another "
-  inline: "puzzle for you"
+  inline: 'Oompa Loompa '
+  inline: 'doom-pa-dee-do '
+  inline: 'I have another '
+  inline: 'puzzle for you'
 end
 ```
 
@@ -62,11 +62,11 @@ Sometimes you want to wrap text in a specific column. Use `wrap:`
 
 ```fish
 function lorem
-  wrap: 80 "Lorem ipsum dolor sit amet, consectetur" \
-           "adipiscing elit. Nulla in purus quis erat" \
-           "aliquet tristique eget et risus. Pellentesque" \
-           "eget leo id urna dignissim elementum quis ut" \
-           "libero. Vivamus interdum at nunc sagittis cursus."
+  wrap: 80 'Lorem ipsum dolor sit amet, consectetur' \
+           'adipiscing elit. Nulla in purus quis erat' \
+           'aliquet tristique eget et risus. Pellentesque' \
+           'eget leo id urna dignissim elementum quis ut' \
+           'libero. Vivamus interdum at nunc sagittis cursus.'
 end
 ```
 
@@ -91,7 +91,7 @@ Using Technicolor it's possible to transform the above function into the one bel
 
 ```fish
 function explode
-  echo (tint: red (bold: "Error: "))(tint: red "You can't explode")
+  echo (tint: red (bold: 'Error:')) (tint: red 'You can't explode')
 end
 ```
 
