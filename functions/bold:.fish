@@ -1,7 +1,5 @@
-function bold: -a text
-  if set -q text
-    set_color -o ^/dev/null
-    inline: "$text"
-    set_color normal ^/dev/null
-  end
+function bold:
+  set_color -o ^/dev/null
+  inline: "$argv"
+  set_color normal ^/dev/null
 end
