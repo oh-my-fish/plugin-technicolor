@@ -91,7 +91,7 @@ Using Technicolor it's possible to transform the above function into the one bel
 
 ```fish
 function explode
-  echo (tint: red (bold: 'Error:')) (tint: red 'You can't explode')
+  echo (tint: red (bold: 'Error:')) (tint: red 'You can\'t explode')
 end
 ```
 
