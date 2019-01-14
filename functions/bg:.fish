@@ -3,8 +3,8 @@ function bg: -a color
     and set -l text $argv[2..-1]
 
   if set -q text
-    set_color -b $color ^/dev/null
+    set_color -b $color 2> /dev/null
     inline: "$text"
-    set_color normal ^/dev/null
+    set_color normal 2> /dev/null
   end
 end

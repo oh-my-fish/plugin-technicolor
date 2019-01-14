@@ -1,5 +1,5 @@
 function bold:
-  set_color -o ^/dev/null
+  set_color -o 2> /dev/null
   inline: "$argv"
-  set_color normal ^/dev/null
+  set_color normal 2> /dev/null
 end
